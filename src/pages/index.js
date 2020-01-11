@@ -13,6 +13,7 @@ export default ({data}) => {
       <Post 
         key = {node.title}
         image={node.featured_media.source_url}
+        alt={node.featured_media.slug}
         title={node.title}
         excerpt ={node.excerpt}
         readMore = {node.slug}/>
@@ -30,6 +31,7 @@ export const query = graphql`
       excerpt
       featured_media{
         source_url
+        slug
       }
     }
   }

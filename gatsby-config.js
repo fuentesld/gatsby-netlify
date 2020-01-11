@@ -7,7 +7,11 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: 'Gatsby Bootstrap'
+    title: 'Gatsby Bootstrap',
+    description: 'This is the description of our website',
+    keywords: 'gatsby, gatsbyjs project, gatsby bootstrap',
+    image:'/static/gatsby.jpg',
+    url:'https://www.gatsbyjs.org'
   },
   plugins: [
     {resolve: `gatsby-source-filesystem`,
@@ -22,6 +26,8 @@ module.exports = {
         protocol:`http`,
         hostingWPCOM:false},
     },
+    `gatsby-plugin-react-helmet`
     
   ]
 }
+
